@@ -1,85 +1,127 @@
-# Scientific Calculator — Python Desktop App
+[README.md](https://github.com/user-attachments/files/27491091/README.md)
+# 🧮 Calculadora Científica
 
-## Features
-- Basic operations: + - * / % ^
-- Scientific functions: sin, cos, tan, asin, acos, atan, log, ln, sqrt, exp, fact, abs, ceil, floor
-- Constants: pi, e, tau
-- Full expression support: `2*sin(30) + log(100)`
-- Equation solver (linear & quadratic) via popup dialog
-- Memory system: MC, MR, M+, M-, MS
-- Calculation history (auto-saved, double-click to reuse)
-- Copy result to clipboard
-- Theme switcher: Cyberpunk / Neon Purple
-- Keyboard input supported
+<div align="center">
 
-## Project Structure
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Tkinter](https://img.shields.io/badge/Tkinter-GUI-FF6B6B?style=for-the-badge)
+![License](https://img.shields.io/badge/Licença-MIT-00D4AA?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Concluído-00C851?style=for-the-badge)
 
+**Calculadora científica desktop com interface gráfica moderna, tema cyberpunk e suporte a expressões matemáticas completas.**
+
+![Demo](demo.gif)
+
+</div>
+
+---
+
+## ✨ Funcionalidades
+
+- ➕ Operações básicas: adição, subtração, multiplicação, divisão
+- 🔬 Funções científicas: `sin`, `cos`, `tan`, `log`, `ln`, `sqrt`, `exp`, e muito mais
+- 📐 Suporte a expressões completas: `2*sin(30) + log(100)`
+- 🧮 Solver de equações lineares e quadráticas
+- 💾 Sistema de memória: `M+`, `M-`, `MR`, `MC`, `MS`
+- 📜 Histórico de cálculos (salvo automaticamente)
+- ⌨️ Entrada por teclado
+- 🎨 Troca de temas: Cyberpunk e Neon Purple
+- 📋 Botão de copiar resultado
+
+---
+
+## 🖥️ Interface
+
+![Demo](demo.gif)
+
+---
+
+## 🚀 Como executar
+
+### Pré-requisitos
+
+- Python 3.10 ou superior
+- Tkinter (normalmente já vem com o Python)
+
+### Instalação do Tkinter (se necessário)
+
+**Windows:**
+```bash
+# Já vem instalado com o Python oficial (python.org)
 ```
-sci_calc/
-├── main.py               ← Entry point
-├── engine/
-│   ├── __init__.py
-│   ├── parser.py         ← Safe math parser (no eval!)
-│   └── calculator.py     ← Engine: memory, history, solver
-├── ui/
-│   ├── __init__.py
-│   ├── window.py         ← Tkinter GUI
-│   └── theme.py          ← Color themes
-└── data/
-    └── history.json      ← Auto-created on first use
-```
-
-## Requirements
-
-- Python 3.10+
-- tkinter (usually bundled with Python)
-
-### Install tkinter if missing:
 
 **Ubuntu/Debian:**
 ```bash
 sudo apt install python3-tk
 ```
 
-**macOS (Homebrew):**
+**macOS:**
 ```bash
 brew install python-tk
 ```
 
-**Windows:** Tkinter is included with the official Python installer from python.org.
-
-## How to Run
+### Rodando o projeto
 
 ```bash
-cd sci_calc
+# Clone o repositório
+git clone https://github.com/Lucas-if-else/calculadora-cientifica.git
+
+# Entre na pasta
+cd calculadora-cientifica
+
+# Execute
 python main.py
 ```
 
-## Keyboard Shortcuts
+---
 
-| Key | Action |
-|-----|--------|
-| 0–9, . | Input number |
-| + - * / | Operators |
-| ^ | Power |
-| ( ) | Parentheses |
-| Enter | Calculate |
-| Backspace | Delete last char |
-| Delete / Escape | All Clear |
+## 📁 Estrutura do projeto
 
-## Extending the Calculator
+```
+calculadora-cientifica/
+├── main.py              # Ponto de entrada
+├── engine/
+│   ├── parser.py        # Parser matemático seguro (sem eval)
+│   └── calculator.py    # Lógica: memória, histórico, solver
+├── ui/
+│   ├── window.py        # Interface gráfica (Tkinter)
+│   └── theme.py         # Temas de cores
+└── data/
+    └── history.json     # Histórico salvo automaticamente
+```
 
-To add a new math function:
+---
 
-1. Open `engine/parser.py`
-2. Add to the `FUNCTIONS` dict:
-   ```python
-   "myFunc": lambda x: ...
-   ```
-3. Add a button in `ui/window.py` → `BUTTON_ROWS`
+## ⌨️ Atalhos de teclado
 
-To add a new theme:
+| Tecla | Ação |
+|-------|------|
+| `0–9` e `.` | Digitar número |
+| `+ - * /` | Operadores |
+| `^` | Potência |
+| `( )` | Parênteses |
+| `Enter` | Calcular |
+| `Backspace` | Apagar último caractere |
+| `Delete` / `Esc` | Limpar tudo |
 
-1. Open `ui/theme.py`
-2. Create a new `Theme(...)` instance
-3. Add it to the `THEMES` dict
+---
+
+## 🛠️ Tecnologias utilizadas
+
+- **Python 3** — Linguagem principal
+- **Tkinter** — Interface gráfica
+- **Parser próprio** — Sem uso de `eval()`, 100% seguro
+
+---
+
+## 👨‍💻 Autor
+
+Feito por **Lucas Silva Santos**
+
+[![GitHub](https://img.shields.io/badge/GitHub-Lucas--if--else-181717?style=for-the-badge&logo=github)](https://github.com/Lucas-if-else)
+
+---
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
